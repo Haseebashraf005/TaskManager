@@ -10,7 +10,7 @@ export const AddTask = ({ tasks, setTasks , individualTask }) => {
         e.preventDefault();
         
         // console.log( e.target);
-        // console.log("Task Value:", e.target.task.value);
+        // console.log("Task Value:", e.tar
 
          // Prevent adding an empty task
          if (!e.target.task.value.trim()) {

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const AddTask = ({ tasks, setTasks , individualTask }) => {
+export const AddTask = ({ tasks, setTasks , individualTask , setindividualTask }) => {
     console.log(individualTask)
 
 
@@ -10,7 +10,7 @@ export const AddTask = ({ tasks, setTasks , individualTask }) => {
         e.preventDefault();
         
         // console.log( e.target);
-        // console.log("Task Value:", e.tar
+        // console.log("Task Value:", e.target.task.value);
 
          // Prevent adding an empty task
          if (!e.target.task.value.trim()) {
@@ -44,7 +44,7 @@ export const AddTask = ({ tasks, setTasks , individualTask }) => {
     return (
         <section className="addTask">
             <form onSubmit={handleSubmit}>
-                <input type="text" name="task" autoComplete="off" placeholder="add task" maxLength="25"   />
+                <input type="text" name="task" value={individualTask.name} autoComplete="off" placeholder="add task" maxLength="25"   />
                 <button type="submit">Add</button>
             </form>
         </section>

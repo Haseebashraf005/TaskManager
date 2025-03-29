@@ -11,7 +11,8 @@ const App = () => {
     // { id: 10003, name: "TASK C", time: "2:09:01 AM 9/14/2030" },
   ])
 
-  const [individualTask ,setindividualTask] = useState({})
+  //create the state for eidit purpose 
+  const [individualTask, setindividualTask] = useState({})
   // console.log(individualTask)
 
 
@@ -19,8 +20,18 @@ const App = () => {
     <>
       <div className="App">
         <Header />
-        <AddTask tasks={tasks} setTasks={setTasks} individualTask={individualTask} />
-        <ShowTasks tasks={tasks} setTasks={setTasks} setindividualTask={setindividualTask} />
+        <AddTask
+          tasks={tasks}
+          setTasks={setTasks}
+          individualTask={individualTask}
+          setindividualTask={setindividualTask}
+        />
+        <ShowTasks
+          tasks={tasks}
+          setTasks={setTasks}
+          individualTask={individualTask}
+          setindividualTask={setindividualTask}
+        />
       </div>
     </>
   )

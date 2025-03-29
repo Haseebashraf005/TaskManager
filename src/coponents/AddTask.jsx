@@ -14,7 +14,7 @@ export const AddTask = ({ tasks, setTasks , individualTask }) => {
 
          // Prevent adding an empty task
          if (!e.target.task.value.trim()) {
-            // alert("Task cannot be empty!");
+            // alert("Task cannot be emp
             return ;
         }
 

@@ -1,20 +1,18 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Header } from './coponents/Header'
 import { AddTask } from './coponents/AddTask'
 import { ShowTasks } from './coponents/ShowTasks'
 import './App.css';
 
 const App = () => {
-  const [tasks, setTasks] = useState([
-    // { id: 10001, name: "TASK A", time: "2:09:01 AM 9/14/2030" },
-    // { id: 10002, name: "TASK B", time: "2:09:01 AM 9/14/2030" },
-    // { id: 10003, name: "TASK C", time: "2:09:01 AM 9/14/2030" },
-  ])
+  const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem("tasks")) || [])
 
   //create the state for eidit purpose 
   const [individualTask, setindividualTask] = useState({})
-  // console.log(individualTask)
 
+  useEffect(()=>{
+    localStorage.setItem("tasks",JSON.stringify(tasks))
+  },[tasks])
 
   return (
     <>

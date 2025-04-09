@@ -9,9 +9,10 @@ export const ShowTasks = ({ tasks, setTasks, individualTask , setindividualTask 
     }
     const handleEidit = (e) => {
         // console.log(e.id)
-        const selectedTask = tasks.find((item) => item.id === e.id)
+        // const selectedTask = tasks.find((item) => item.id === e.id)
         // console.log(selectedTask)
-        setindividualTask(selectedTask)
+        // setindividualTask(selectedTask)
+        setindividualTask(e)
 
 
 
